@@ -6,7 +6,7 @@ The given data has been thoroughly checked and took a cleaning process and prepr
 
 # Machine learning
 The data has been splitted and trained and used the various regression model to predict the results with high accuracy rate.
-With the high accuracy model should be pickled to use it to develop the streamlit application
+With the high accuracy, the model should be pickled to use it to develop the streamlit application
 
 # Streamlit
 Developed a streamlit application to use it as user friendly industrial copper price prediction model.
