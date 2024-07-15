@@ -50,24 +50,24 @@ if selected == "Selling Price Prediction":
     with col2:
         predict_button_1 = st.button("Predict Selling Price", type = "primary")
 
-    if predict_button_1:
-
-        a1 = float(a1)
-        b1 = float(b1)
-        c1 = float(c1)
-        d1 = float(d1)
-        e1 = float(e1)
-        f1 = float(f1)
-        g1 = float(g1)
-        h1 = float(h1)
-        i1 = float(i1)
-
-
-        new_sample_1 = np.array(
-                [[np.log(a1), b1, c1, d1, np.log(e1), f1, g1, h1, i1]])
-        new_pred_1 = regression_model.predict(new_sample_1)[0]
-
-        st.write('## :green[Predicted resale price:] ', np.exp(new_pred_1))
+        if predict_button_1:
+    
+            a1 = float(a1)
+            b1 = float(b1)
+            c1 = float(c1)
+            d1 = float(d1)
+            e1 = float(e1)
+            f1 = float(f1)
+            g1 = float(g1)
+            h1 = float(h1)
+            i1 = float(i1)
+    
+    
+            new_sample_1 = np.array(
+                    [[np.log(a1), b1, c1, d1, np.log(e1), f1, g1, h1, i1]])
+            new_pred_1 = regression_model.predict(new_sample_1)[0]
+    
+            st.write('## :green[Predicted resale price:] ', np.exp(new_pred_1))
 
 if selected == "Status":
     st.markdown("# :blue[Predicting Results based on Trained Model]")
@@ -89,23 +89,23 @@ if selected == "Status":
     with col2:
         predict_button_2 = st.button("Predict Status", type = "primary")
 
-    if predict_button_2:
-
-        a2 = float(a2)
-        b2 = float(b2)
-        c2 = float(c2)
-        d2 = float(d2)
-        e2 = float(e2)
-        f2 = float(f2)
-        g2 = float(g2)
-        h2 = float(h2)
-        i2 = float(i2)
-
-        new_sample_2 = np.array(
-                [[np.log(a2), np.log(b2), c2, d2, np.log(e2), f2, g2, h2, i2]])
-        new_pred_2 = classification_model.predict(new_sample_2)
-            
-        if new_pred_2 ==1:
-            st.write('## :green[The Status is: Won]')
-        else:
-            st.write('## :green[The Status is: Lost]')
+        if predict_button_2:
+    
+            a2 = float(a2)
+            b2 = float(b2)
+            c2 = float(c2)
+            d2 = float(d2)
+            e2 = float(e2)
+            f2 = float(f2)
+            g2 = float(g2)
+            h2 = float(h2)
+            i2 = float(i2)
+    
+            new_sample_2 = np.array(
+                    [[np.log(a2), np.log(b2), c2, d2, np.log(e2), f2, g2, h2, i2]])
+            new_pred_2 = classification_model.predict(new_sample_2)
+                
+            if new_pred_2 ==1:
+                st.write('## :green[The Status is: Won]')
+            else:
+                st.write('## :green[The Status is: Lost]')
